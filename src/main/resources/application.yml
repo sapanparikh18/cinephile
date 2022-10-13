@@ -11,4 +11,14 @@ netty:
   default:
     allocator:
       max-order: 3
-jpa.default.properties.hibernate.hbm2ddl.auto: none
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+    entity-scan:
+      packages: 'co.incubyte'
+liquibase:
+  datasources:
+    default:
+      change-log: 'classpath:db/liquibase-changelog.sql'

@@ -17,12 +17,15 @@ dependencies {
     implementation("io.micronaut.liquibase:micronaut-liquibase")
     implementation("io.micronaut.sql:micronaut-hibernate-jpa")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
+    implementation group: 'io.micronaut.data', name: 'micronaut-data-hibernate-jpa', version: '3.8.1'
     implementation("jakarta.annotation:jakarta.annotation-api")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.h2database:h2")
     testImplementation("org.assertj:assertj-core")
     testImplementation("org.mockito:mockito-core")
     implementation("io.micronaut:micronaut-validation")
+    testImplementation 'org.mockito:mockito-junit-jupiter:2.23.0'
+    implementation("io.micronaut.liquibase:micronaut-liquibase")
 
 }
 
