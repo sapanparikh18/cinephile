@@ -11,6 +11,15 @@ pool:
 
 steps:
 - task: Gradle@2
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Pay-As-You-Go(0b89c9c5-bd7b-41ac-82a0-959ef6890b53)'
+    appType: 'webAppLinux'
+    WebAppName: 'cinephile1'
+    packageForLinux: 'build/libs/*-all.jar'
+    RuntimeStack: 'JAVA|11-java11'
+    StartupCommand: 'java -jar cinephile-all.jar'
   inputs:
     workingDirectory: ''
     gradleWrapperFile: 'gradlew'
